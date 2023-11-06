@@ -11,5 +11,18 @@
     "conflict": {
         "fourkitchens/project_ci": "*"
     },
-    "require": {}
+    "require": {
+        "drupal/core-composer-scaffold": "*"
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "file-mapping": {
+                "[web-root]/.circleci/config.yml": {
+                    "mode" : "replace",
+                    "path" : "config.yml",
+                    "overwrite" : false
+                }
+            }
+        }
+    }
 }
