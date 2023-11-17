@@ -32,5 +32,11 @@
                 }
             }
         }
+    },
+    "scripts": {
+        "pots-pre-commit-check": [
+            "./vendor/bin/phpcs",
+            "find web/modules/custom web/themes/custom \\( -iname  '*.php' -o -iname '*.inc' -o -iname '*.module' -o -iname '*.install'-o -iname '*.theme' \\) '!' -path '*/node_modules/*' -print0 | xargs -0 -n1 -P8 php -l"
+        ]
     }
 }
