@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ruleset name="Project Standard" namespace="FourKitchens\project\CS\Standard">
+<arg name="extensions" value="php,module,inc,install,test,profile,theme,css,info,txt,md,yml"/>
+<rule ref="vendor/drupal/coder/coder_sniffer/Drupal">
+<!--
+<exclude name="Drupal.Commenting.FunctionComment.MissingReturnComment"/>
+<exclude name="Drupal.Commenting.DocComment.MissingShort"/>
+<exclude name="Drupal.Commenting.FunctionComment.MissingParamComment"/>
+<exclude name="Drupal.Files.LineLength.TooLong"/>
+-->
+</rule>
+<rule ref="vendor/drupal/coder/coder_sniffer/DrupalPractice" />
+
+<file>web/modules/custom</file>
+<file>web/themes/custom</file>
+
+<exclude-pattern>*/node_modules/*</exclude-pattern>
+<exclude-pattern>emulsify.php</exclude-pattern>
+<exclude-pattern>*/themes/custom/*/*.md</exclude-pattern>
+<exclude-pattern>*/themes/custom/*/.out</exclude-pattern>
+<exclude-pattern>*/themes/custom/*/dist</exclude-pattern>
+
+</ruleset>

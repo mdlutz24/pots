@@ -12,7 +12,10 @@
         "fourkitchens/project_ci": "*"
     },
     "require": {
-        "drupal/core-composer-scaffold": "*"
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
+        "drupal/core-composer-scaffold": "*",
+        "drupal/coder": "^8.3.22",
+        "mglaman/phpstan-drupal": "~1.2.4"
     },
     "extra": {
         "drupal-scaffold": {
@@ -20,6 +23,11 @@
                 "[project-root]/.circleci/config.yml": {
                     "mode" : "replace",
                     "path" : "config.yml",
+                    "overwrite" : false
+                },
+                "[project-root]/phpcs.xml": {
+                    "mode" : "replace",
+                    "path" : "assets/phpcs.xml.dist",
                     "overwrite" : false
                 }
             }
