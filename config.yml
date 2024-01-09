@@ -99,11 +99,11 @@ env: &env
   #
   # CANONICAL_ENV: dev
 
-  # Script used to sanatize databases. Only used when CANONICAL_ENV is not dev.
+  # Script used to sanitize databases. Only used when CANONICAL_ENV is not dev.
   #
   # Default: empty
   #
-  # SANATIZE_SCRIPT: ./vendor/fourkitchens/pots/scripts/sanatize-db
+  # SANITIZE_SCRIPT: ./vendor/fourkitchens/pots/scripts/sanitize-db
 
   # Sync Configuration
   #
@@ -626,7 +626,7 @@ commands:
             - run:
                 name: deploy to Pantheon
                 command: |
-                  if [ -f "./.circleci/scripts/deploy-to-live" ]; then
+                  if [ -f "./.circleci/scripts/deploy" ]; then
                     ./.circleci/scripts/deploy
                   else
                     ./vendor/fourkitchens/pots/scripts/pantheon/deploy
